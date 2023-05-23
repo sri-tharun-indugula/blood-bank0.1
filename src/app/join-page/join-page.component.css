@@ -1,0 +1,12 @@
+.card-container-join{
+    text-align: center;
+    width: 40%;
+    margin: auto;
+}
+.card-header-join{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 30px;
+}
+.card-img-join{
+    width: 30%;
+}
