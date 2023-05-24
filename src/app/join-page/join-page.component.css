@@ -10,3 +10,10 @@
 .card-img-join{
     width: 30%;
 }
+.btn-custom-join{
+    background-color: #b90302;
+    color: white;
+    width: 50%;
+    padding: 10px;
+    font-size: 25px;
+}
