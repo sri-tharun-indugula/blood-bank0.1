@@ -16,12 +16,12 @@ export class JoinPageComponent implements OnInit{
     gender:['',[Validators.required]],
     email:['',[Validators.required,Validators.email]],
     bloodgroup:['',[Validators.required]],
+    otherbloodGroup:[''],
     joinCheckbox:['',[Validators.required]]
    })
   }
   submit(){
-    console.log(this.joininForm.value,this.joininForm.valid)
-    console.log(this.joininForm.value.joinCheckbox,'123')
+  
 
   }
 

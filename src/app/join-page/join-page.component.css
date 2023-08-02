@@ -17,3 +17,9 @@
     padding: 10px;
     font-size: 25px;
 }
+.error-msg {
+    text-align: start;
+    color: red;
+    font-family: sans-serif;
+    font-size: medium;
+}
