@@ -1,6 +1,6 @@
 <p>join-page works!</p>
 
-<div class="card card-container-join">
+<div class="card card-container-join shadow">
     <div class="card-body p-5" [formGroup]="joininForm">
         <img src="../../assets/images/logo_size_invert.jpg" alt="logo" class="card-img-join">
         <h3 class="card-header-join">Fill the details</h3>
@@ -36,24 +36,32 @@
                     Female
                 </label>
             </div>
-            <div class="error-msg">
-                <span
-                    *ngIf="(!joininForm.controls.gender.value&&joininForm.controls.gender.invalid)   ">enter
-                    Enter gender</span>
-            </div>
         </div>
         <div class="form-floating mb-4">
             <input type="email" class="form-control" placeholder="name@example.com" formControlName="email">
             <label>Email address</label>
+            <div class="error-msg">
+                <span
+                    *ngIf="(!joininForm.controls.email.value||joininForm.controls.email.invalid) && joininForm.controls.email.touched  ">Enter
+                     Email Ex:'examble@gmail.com'</span>
+            </div>
         </div>
-        <select class="form-select mb-4" formControlName="bloodgroup" aria-label="Default select example">
-            <option selected disabled value="">Select your Blood group</option>
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="AB">AB</option>
-            <option value="O">O</option>
-            <option value="OTHERS">Others</option>
-        </select>
+        <div>
+
+            <select class="form-select mb-1" formControlName="bloodgroup" aria-label="Default select example">
+                <option selected disabled value="">Select your Blood group</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="AB">AB</option>
+                <option value="O">O</option>
+                <option value="OTHERS">Others</option>
+            </select>
+            <div class="error-msg">
+                <span
+                    *ngIf="(!joininForm.controls.bloodgroup.value||joininForm.controls.bloodgroup.invalid) && joininForm.controls.bloodgroup.touched  ">Enter
+                     your Blood group</span>
+            </div>
+        </div>
         <input *ngIf="joininForm.value.bloodgroup=='OTHERS'" type="text" class="form-control"
             formControlName="otherbloodGroup" placeholder="please enter the group" formControlName="otherbloodGroup">
         <div class="d-flex mt-4">
@@ -66,6 +74,4 @@
         </div>
         <button class="btn btn-custom-join mt-5" (click)="submit()" type="button">Join Us</button>
     </div>
-    <p>{{joininForm.value.joinCheckbox|json}}123</p>
-    <p>{{joininForm.value.bloodgroup|json}}</p>
 </div>
