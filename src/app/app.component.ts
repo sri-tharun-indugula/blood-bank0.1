@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Blood-bankk-app0.1';
+  title = 'Blood-bankk-app0';
   constructor(private router:Router){
     this.router.navigate(['/home'])
   }
