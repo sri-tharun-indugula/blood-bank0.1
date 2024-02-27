@@ -24,3 +24,22 @@
     font-size: medium;
     padding-left: 11px;
 }
+.elips {
+    white-space: nowrap;
+    width: 200px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 48px;
+}
+.elips:hover {
+    overflow: auto;
+    text-overflow: initial;
+    width: fit-content;
+    white-space: break-spaces;
+}
+.form-check-label {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
